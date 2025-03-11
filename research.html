@@ -75,19 +75,20 @@
 		  background-color: #ffffff;
 		}
 	  
-		/* Main content inline links (.my) — remove hover effects completely */
-		a.my:link,
-		a.my:visited {
-		  color: #009B77;
-		  text-decoration: none;
-		  background-color: transparent;
-		}
-	  
-		a.my:hover {
-		  color: #009B77 !important;
-		  background-color: transparent !important;
-		  text-decoration: none;
-		}
+		/* Main content inline links (.my) — no hover effect, no layout shift */
+a.my:link,
+a.my:visited,
+a.my:hover {
+  color: #009B77;
+  text-decoration: none;
+  background-color: transparent !important;
+  font-weight: inherit;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  display: inline;
+  box-sizing: border-box;
+}
 	  
 		div.naka {
 		  position: absolute;
